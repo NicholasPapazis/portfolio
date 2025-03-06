@@ -4,36 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nicholas Papazis</title>
-    <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
-    <header>
-        <h1>Nicholas Papazis</h1>
-        <p>Software Engineer</p>
+    <header class="bg-white text-black p-2">
+        
+        <div class="container mx-auto flex justify-center items-center space-x-4">
+            <ul class="flex space-x-4">
+                <li class="crumb"><a href="#">Home</a></li>
+                <li class="crumb"><a href="#">Projects</a></li>
+                <li class="crumb">About</li>
+                <li class="crumb">Contact</li>
+            </ul>
+        </div>
+        
+        
     </header>
 
-    <section id="about">
-        <h2>About Me</h2>
-        <p>Write a brief introduction about yourself here.</p>
+
+    <!-- Profile Section -->
+    <section class="flex flex-col items-center p-10" style="background: linear-gradient(to bottom, #DAF1FF, #F9F9F9);">
+        <!-- Name -->
+        <h2 class="text-3xl font-bold text-black">Nicholas Papazis</h2>
+        <!-- Job Title -->
+        <p class="text-xl text-gray-700 mt-2">Software Engineer</p>
+        <!-- Profile Image -->
+        <img src="assets/profile_pic.PNG" alt="Your Name" class="w-32 h-32 mt-4 rounded-full border-4 border-gray-300">
     </section>
 
-    <section id="projects">
-        <h2>My Projects</h2>
-        <ul>
-            <li><a href="https://link-to-project1.com">Project 1</a>: Brief description.</li>
-            <li><a href="https://link-to-project2.com">Project 2</a>: Brief description.</li>
-            <li><a href="https://link-to-project3.com">Project 3</a>: Brief description.</li>
-        </ul>
-    </section>
 
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>Email: your.email@example.com</p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/your-profile">Your LinkedIn</a></p>
-    </section>
+    
 
-    <footer>
-        <p>&copy; 2025 Your Name</p>
-    </footer>
 </body>
 </html>

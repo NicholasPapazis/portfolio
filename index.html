@@ -4,36 +4,202 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nicholas Papazis</title>
-    <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+
 </head>
 <body>
-    <header>
-        <h1>Nicholas Papazis</h1>
-        <p>Software Engineer</p>
+    <header class="fixed top-0 left-0 w-full bg-white text-black p-2 z-10">
+        
+        <div class="container mx-auto flex justify-center items-center space-x-4">
+            <ul class="flex space-x-4">
+                <li class="crumb"><a href="#">Home</a></li>
+                <li class="crumb"><a href="#projects">Projects</a></li>
+                <li class="crumb"><a href="#about">About</a></li>
+            </ul>
+        </div>
+        
+        
     </header>
 
-    <section id="about">
-        <h2>About Me</h2>
-        <p>Write a brief introduction about yourself here.</p>
+
+    <!-- Profile Section -->
+    <section class="flex flex-col items-center p-20" style="background: linear-gradient(to bottom, #badef7, #F9F9F9);">
+        <!-- Name -->
+        <h2 class="text-4xl font-bold text-black">Nicholas Papazis</h2>
+        <!-- Job Title -->
+        <p class="text-2xl text-black-700 mt-2">Software Engineer</p>
+        <!-- Profile Image -->
+        <img src="assets/profile_pic.PNG" alt="Your Name" class="w-48 h-48 mt-7 rounded-full border-2 border-stone-950">
+        
+
+        <div class="flex space-x-4 m-8 border-solid border-1 border-black">
+            <!-- First Button -->
+            <button onclick="document.getElementById('about').scrollIntoView({ behavior: 'smooth' })" class="bg-blue-500 text-white py-2 px-5 rounded-full hover:bg-blue-600">
+              About me
+            </button>
+        
+            <!-- Second Button -->
+            <button class="bg-transparent text-blue-500 py-2 px-6 rounded-full hover:bg-blue-500 hover:text-white border-2 border-blue-500">
+              Contact
+            </button>
+          </div>
+
+          <p class="text-xl mt-3 font-bold bg-gradient-to-r from-teal-500 to-blue-500 bg-clip-text text-transparent">Code with purpose. Create with passion.</p>
+          
+
     </section>
 
-    <section id="projects">
-        <h2>My Projects</h2>
-        <ul>
-            <li><a href="https://link-to-project1.com">Project 1</a>: Brief description.</li>
-            <li><a href="https://link-to-project2.com">Project 2</a>: Brief description.</li>
-            <li><a href="https://link-to-project3.com">Project 3</a>: Brief description.</li>
-        </ul>
+    <section id="projects" class="flex flex-col lg:flex-row">
+
+        <div class="flex-1 lg:w-1/2 text-center m-4 p-16 pl-56 pr-56 bg-slate-50">
+            <!-- Project Title -->
+            <h2 class="text-3xl font-semibold text-black mb-4">PortalPro - Student Registration Application</h2>
+        
+            <!-- Project Description -->
+            <p class="text-lg text-gray-700 mb-6">
+                PortalPro simplifies the process of managing student records. Whether you're adding, updating, or viewing student data, this application provides a clean, intuitive interface and powerful features to keep everything organized.
+            </p>
+        
+            <!-- Features Section -->
+            <div class="text-left mb-6">
+                <h3 class="text-2xl font-semibold text-black mb-4">Features</h3>
+                <ul class="list-disc pl-6 text-lg text-gray-700 space-y-4">
+                    <li><strong>1. CRUD Functionality</strong> - Create, Read, Update, and Delete student records with ease.</li>
+                    <li><strong>2. Advanced Registration with Validation</strong> - Ensures valid @farmingdale.edu email and password validation using regex.</li>
+                    <li><strong>3. User Session and Preferences</strong> - Implemented signup/login with the Java Preferences API and stores credentials upon sign-in.</li>
+                    <li><strong>4. Azure SQL Database Integration</strong> - Secure and scalable data storage in Azure SQL Database.</li>
+                    <li><strong>5. Profile Image Storage</strong> - Upload and store student profile images in Azure Blob Storage.</li>
+                    <li><strong>6. User Feedback & Status Bar</strong> - Real-time feedback with status bar (e.g., successful registrations or import status).</li>
+                    <li><strong>7. Edit Records Directly in the Table</strong> - Inline editing of student records, with immediate database updates.</li>
+                    <li><strong>8. Import/Export CSV</strong> - Import/export student data in CSV format for backup or analysis.</li>
+                    <li><strong>9. Generate PDF Reports</strong> - Generate student reports with visualized data such as bar charts.</li>
+                    <li><strong>10. Thread-Safe User Sessions</strong> - Thread-safe management of user sessions for smooth concurrent usage.</li>
+                </ul>
+            </div>
+        
+            <!-- Project Image -->
+            <img src="assets/portal-pro1.png" alt="PortalPro Screenshoat" class="w-full h-auto rounded-lg shadow-md mb-6">
+        
+            <!-- Technologies Used Section -->
+            <h3 class="text-2xl font-semibold text-black mb-4">Technologies Used</h3>
+            <ul class="list-inside list-disc text-lg text-gray-700 mb-6">
+                <li><strong>JavaFX</strong>: The user interface is built with JavaFX for a modern desktop experience.</li>
+                <li><strong>Azure SQL Database</strong>: Secure and scalable cloud database for storing student data.</li>
+                <li><strong>Azure Blob Storage</strong>: Used for securely storing student profile images in the cloud.</li>
+                <li><strong>Regular Expressions (Regex)</strong>: Used for validating email and password inputs during registration.</li>
+                <li><strong>Java Preferences API</strong>: Manages user preferences and settings across sessions.</li>
+            </ul>
+        
+            <!-- Optional second image (e.g., project demo image) -->
+            <img src="assets/portal-pro2.png" alt="PortalPro PDF Report Generation" class="w-full h-auto rounded-lg shadow-md">
+        </div>
+        
+
+        
     </section>
 
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>Email: your.email@example.com</p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/your-profile">Your LinkedIn</a></p>
+    <section id="about" class="flex flex-col items-center p-20" style="background: linear-gradient(to bottom, #badef7, #F9F9F9);">
+        <h1 class="text-4xl font-bold mb-4">About Me</h1>
+        
+        <img src="assets/profile_pic.PNG" alt="Your Name" class="w-32 h-32 rounded-full border-2 border-gray-500 mb-6">
+        
+        <p class="text-xl mb-6 text-center">Hi, I'm <strong>Nick</strong>, a junior at Farmingdale State College pursuing a Bachelor of Science degree in <strong>computer science.</strong></p>
+    
+        <h2 class="text-2xl font-bold mb-6">Skills</h2>
+        
+        <!-- Skills Section -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
+            <!-- Programming -->
+            <div class="space-y-2">
+                <h3 class="font-semibold text-xl">Programming</h3>
+                <ul class="list-disc ml-6 text-lg">
+                    <li>Java</li>
+                    <li>C</li>
+                    <li>JavaScript</li>
+                    <li>TypeScript</li>
+                    <li>PHP</li>
+                    <li>SQL</li>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                </ul>
+            </div>
+    
+            <!-- Web & Mobile -->
+            <div class="space-y-2">
+                <h3 class="font-semibold text-xl">Web & Mobile</h3>
+                <ul class="list-disc ml-6 text-lg">
+                    <li>React.js</li>
+                    <li>Node.js</li>
+                    <li>Express.js</li>
+                    <li>JavaFX</li>
+                    <li>Bootstrap</li>
+                    <li>Android Studio</li>
+                </ul>
+            </div>
+    
+            <!-- Database & Cloud -->
+            <div class="space-y-2">
+                <h3 class="font-semibold text-xl">Database & Cloud</h3>
+                <ul class="list-disc ml-6 text-lg">
+                    <li>MySQL</li>
+                    <li>phpMyAdmin</li>
+                    <li>Azure</li>
+                    <li>NoSQL</li>
+                    <li>MongoDB</li>
+                    <li>Firebase</li>
+                </ul>
+            </div>
+    
+            <!-- Tech & Methods -->
+            <div class="space-y-2">
+                <h3 class="font-semibold text-xl">Tech & Methods</h3>
+                <ul class="list-disc ml-6 text-lg">
+                    <li>Git</li>
+                    <li>GitHub</li>
+                    <li>VS Code</li>
+                    <li>IntelliJ IDEA</li>
+                    <li>Clion</li>
+                    <li>Agile (Scrum, Kanban)</li>
+                    <li>TDD</li>
+                </ul>
+            </div>
+        </div>
+    
+
     </section>
 
-    <footer>
-        <p>&copy; 2025 Your Name</p>
+
+    <section id="contact" class="bg-gray-100 py-16">
+    <div class="container mx-auto text-center">
+        <h2 class="text-4xl font-bold text-gray-800 mb-8">Contact Me</h2>
+        <p class="text-xl text-gray-600 mb-12">Feel free to connect with me on LinkedIn!</p>
+        
+        <!-- LinkedIn Link -->
+        <a href="https://www.linkedin.com/in/nicholas-papazis" target="_blank" class="inline-block bg-blue-500 text-white py-3 px-8 rounded-lg shadow-lg hover:bg-blue-600">
+            Connect on LinkedIn
+        </a>
+    </div>
+</section>
+
+
+
+    
+    <footer class="bg-gray-800 text-white py-4 mt-10">
+        <div class="container mx-auto text-center">
+            <p>&copy; <span id="current-year"></span> Nicholas Papazis. All rights reserved.</p>
+        </div>
     </footer>
+    
+    <script>
+        // Automatically sets the current year in the footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+    
+
+
+    
+
 </body>
 </html>
